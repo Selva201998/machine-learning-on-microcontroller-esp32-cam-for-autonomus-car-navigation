@@ -10,7 +10,7 @@ from keras.utils import to_categorical
 from imutils import paths
 import numpy as np
 import random
-import cv2
+import cv2 
 import os
 
 class LeNet:
