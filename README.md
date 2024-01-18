@@ -44,10 +44,37 @@ Optimize the machine learning algorithm compatible with the ESP32 CAM micro-cont
 A unique aspect of this project involves comparing the computational capabilities and performance of the micro-controller-based systems with conventional computer setups. This comparison provides insights into the viability of microcontroller technology for real-world navigation scenarios.
 
 ## Methodology
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Diagram</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: { extensions: ["autoload-all.js"] },
+            tex2jax: { inlineMath: [['$', '$']] }
+        });
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
 \label{sec:Methodology}
 \begin{figure}[ht]
     \centering
-    \begin{tikzpicture}[node distance=2cm]
+    \( \begin{tikzpicture}[node distance=2cm]
     
     % Define styles for nodes
     \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
@@ -58,7 +85,7 @@ A unique aspect of this project involves comparing the computational capabilitie
     \node (datacollection) [startstop] {Experimental Setup and Data Collection};
     \node (datasplit) [process, below of=datacollection] {Data Splitting (Training, Test)};
     \node (datapreprocessing) [process, below of=datasplit] {Data Preprocessing};
-    \node (machinelearning) [process, below of=datapreprocessing] {Machine Learning Models};
+    <node (machinelearning) [process, below of=datapreprocessing] {Machine Learning Models};
     \node (edgeimpulse) [process, below of=machinelearning] {Optimize ML model and deploy into ESP32 micro-controller};
     \node (testmodel) [process, below of=edgeimpulse] {Test the Model};
     \node (end) [startstop, below of=testmodel] {End};
@@ -71,10 +98,14 @@ A unique aspect of this project involves comparing the computational capabilitie
     \draw [arrow] (edgeimpulse) -- (testmodel);
     \draw [arrow] (testmodel) -- (end);
     
-    \end{tikzpicture}
+    \end{tikzpicture} \)
     \caption{Workflow Diagram}
     \label{fig:workflow}
-\end{figure}
+</figure>
+
+</body>
+</html>
+
 
 
 ### Experimental Setup and Data Collection
