@@ -44,38 +44,38 @@ Optimize the machine learning algorithm compatible with the ESP32 CAM micro-cont
 A unique aspect of this project involves comparing the computational capabilities and performance of the micro-controller-based systems with conventional computer setups. This comparison provides insights into the viability of microcontroller technology for real-world navigation scenarios.
 
 ## Methodology
-
 \label{sec:Methodology}
 \begin{figure}[ht]
-\centering
-\begin{tikzpicture}[node distance=2cm]
-
-% Define styles for nodes
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-
-% Nodes
-\node (datacollection) [startstop] {Experimental Setup and Data Collection};
-\node (datasplit) [process, below of=datacollection] {Data Splitting (Training, Test)};
-\node (datapreprocessing) [process, below of=datasplit] {Data Preprocessing};
-\node (machinelearning) [process, below of=datapreprocessing] {Machine Learning Models};
-\node (edgeimpulse) [process, below of=machinelearning] {Optimize ML model and deploy into ESP32 micro-controller};
-\node (testmodel) [process, below of=edgeimpulse] {Test the Model};
-\node (end) [startstop, below of=testmodel] {End};
-
-% Arrows
-\draw [arrow] (datacollection) -- (datasplit);
-\draw [arrow] (datasplit) -- (datapreprocessing);
-\draw [arrow] (datapreprocessing) -- (machinelearning);
-\draw [arrow] (machinelearning) -- (edgeimpulse);
-\draw [arrow] (edgeimpulse) -- (testmodel);
-\draw [arrow] (testmodel) -- (end);
-
-\end{tikzpicture}
-\caption{Workflow Diagram}
-\label{fig:workflow}
+    \centering
+    \begin{tikzpicture}[node distance=2cm]
+    
+    % Define styles for nodes
+    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+    \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+    
+    % Nodes
+    \node (datacollection) [startstop] {Experimental Setup and Data Collection};
+    \node (datasplit) [process, below of=datacollection] {Data Splitting (Training, Test)};
+    \node (datapreprocessing) [process, below of=datasplit] {Data Preprocessing};
+    \node (machinelearning) [process, below of=datapreprocessing] {Machine Learning Models};
+    \node (edgeimpulse) [process, below of=machinelearning] {Optimize ML model and deploy into ESP32 micro-controller};
+    \node (testmodel) [process, below of=edgeimpulse] {Test the Model};
+    \node (end) [startstop, below of=testmodel] {End};
+    
+    % Arrows
+    \draw [arrow] (datacollection) -- (datasplit);
+    \draw [arrow] (datasplit) -- (datapreprocessing);
+    \draw [arrow] (datapreprocessing) -- (machinelearning);
+    \draw [arrow] (machinelearning) -- (edgeimpulse);
+    \draw [arrow] (edgeimpulse) -- (testmodel);
+    \draw [arrow] (testmodel) -- (end);
+    
+    \end{tikzpicture}
+    \caption{Workflow Diagram}
+    \label{fig:workflow}
 \end{figure}
+
 
 ### Experimental Setup and Data Collection
 In the initial phase of our project, we meticulously set up a controlled laboratory environment for data collection. This included carefully managing lighting conditions and camera angles to ensure the creation of a diverse and representative image dataset. The data collection process itself involved manual driving of the vehicle along a predefined path, exclusively utilizing the ESP32 camera module for image capture. This deliberate setup allowed us to gather data under consistent conditions, setting the stage for robust experimentation.
