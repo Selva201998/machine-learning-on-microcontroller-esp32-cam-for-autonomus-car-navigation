@@ -59,3 +59,20 @@ Designing an optimal convolution neural network architecture is the main aim of 
 
 ### Optimize ML model and Deployment into ESP32 micro-controller
 The optimization and deployment of our machine learning model onto the ESP32 CAM microcontroller were streamlined through the utilization of the Edge Impulse platform. This platform played a pivotal role in converting the trained model into a resource-efficient format compatible with the microcontroller's computational capabilities and memory constraints. The process entailed generating optimized C++ code and seamlessly integrating it with the ESP32 CAM, enabling real-time predictions. Additionally, Edge Impulse simplified the integration with necessary libraries, effectively bridging the gap between the development and deployment phases of our machine learning model. The resulting optimized C++ code, along with the essential libraries, was seamlessly incorporated into the Arduino IDE for further development and deployment.
+
+## Experimental Setup
+
+In our experimental setup (see Section 4), we followed the methodology described in the previous section. We followed two approaches to reach the objectives of the project.
+
+![Figure 7.1: Autonomous Car](images/Donkey%20Car.jpg)
+
+### 7.1 Phase 1
+
+#### 7.1.1 Data Collection
+
+Beginning with collecting images for creating the dataset, the ESP32 camera had many resolutions (refer to Figure 5.4). To ensure a consistent region of interest (ROI) within the captured images, it was imperative to adopt a resolution of 112 x 84 pixels. This resolution was strategically chosen to optimize computational efficiency while preserving the necessary level of detail for subsequent image processing and analysis.
+
+The ESP32 camera module also enabled us with the acquisition of images in grayscale. Grayscale images played a pivotal role in image preprocessing tasks.
+
+We have captured and curated images to 1200, distributed among four different classes (Forward, Right, Left, Stop).
+
